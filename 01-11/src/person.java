@@ -4,7 +4,7 @@ abstract class person {
     public abstract void name();   //抽象方法，且不能有方法体，子类必须重写(使用)
 
     public void play() {             //普通方法，子类非必须使用
-        System.out.println(name + "玩");
+        System.out.println("玩");
     }
 }
 
@@ -12,6 +12,6 @@ class man extends person{
 
     @Override
     public void name() {
-        String name=""
+        System.out.println("张三");
     }
 }
