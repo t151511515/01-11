@@ -1,4 +1,4 @@
-package hangtianxitong;
+package OrderPlaneTicketSystem;
 
 public class customer {
     public String id;
