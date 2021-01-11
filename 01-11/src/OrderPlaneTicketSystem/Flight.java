@@ -5,7 +5,7 @@ public class Flight {
     private String planeType;       //机型
     private String departureAlrPort;        //起始机场
     private String destinationAirpORT;      //终点机场
-    private String departureTime;           //飞行时间
+    private String departureTime;           //出发时间
 
     public String getId() {
         return id;

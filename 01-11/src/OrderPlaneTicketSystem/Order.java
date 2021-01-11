@@ -9,7 +9,7 @@ public class Order {
     private float jptgx;            //机票退改险
     private float yhq;              //优惠券
     private float hszj;             //含税总价
-    private customer customers[];
+    private customer customers[];       //顾客数据总集
 
     public String getId() {
         return id;
