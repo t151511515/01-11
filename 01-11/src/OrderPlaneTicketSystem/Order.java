@@ -1,5 +1,7 @@
 package OrderPlaneTicketSystem;
 
+import java.util.Set;
+
 public class Order {
     private String id;
     private float jpjg;     //机票价格
@@ -9,7 +11,7 @@ public class Order {
     private float jptgx;            //机票退改险
     private float yhq;              //优惠券
     private float hszj;             //含税总价
-    private customer customers[];       //顾客数据总集
+    private Set<customer> customer;       //顾客数据总集//<>内为泛型
 
     public String getId() {
         return id;
@@ -75,11 +77,11 @@ public class Order {
         this.hszj = hszj;
     }
 
-    public customer[] getCustomers() {
-        return customers;
+    public Set<OrderPlaneTicketSystem.customer> getCustomer() {
+        return customer;
     }
 
-    public void setCustomers(customer[] customers) {
-        this.customers = customers;
+    public void setCustomer(Set<OrderPlaneTicketSystem.customer> customer) {
+        this.customer = customer;
     }
 }
