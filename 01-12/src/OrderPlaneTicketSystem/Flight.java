@@ -23,6 +23,21 @@ public class Flight {
 
     public Flight(String id, String flightId, String planeType, int currentSeatsNum, String departureAirPort, String destinationAirPort, String departureTime) {
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "id='" + id + '\'' +
+                ", planeType='" + planeType + '\'' +
+                ", departureAlrPort='" + departureAlrPort + '\'' +
+                ", destinationAirpORT='" + destinationAirpORT + '\'' +
+                ", departureTime='" + departureTime + '\'' +
+                ", currentSeatsNum=" + currentSeatsNum +
+                ", totalSeatNum='" + totalSeatNum + '\'' +
+                ", flightId='" + flightId + '\'' +
+                '}';
+    }
+
     public String getFlightId() {
         return flightId;
     }
