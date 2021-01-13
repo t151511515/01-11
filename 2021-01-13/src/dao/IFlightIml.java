@@ -16,6 +16,7 @@ public class IFlightIml implements IFlightDao{
 
     @Override
     public void insertFlight(Flight flight) throws SQLException {
+        System.out.println("进入Dao");
         String url="jdbc:oracle:thin:@localhost:1521:orcl";
         String username="opts";
         String password="opts1234";

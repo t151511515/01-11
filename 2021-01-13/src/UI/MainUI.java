@@ -7,9 +7,11 @@ import impl.IFlightService;
 import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainUI {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while(true){
             System.out.println("请输入相应的数字进行操作：");
@@ -37,8 +39,28 @@ public class MainUI {
                     System.out.println("请输入起飞时间：");
                     String departureTime=scanner.next();
                     Flight flight=new Flight(id,flightId,planeType,currentSeatsNum,departureAirPort,destinationAirPort,departureTime);
-                    IFlightService iFlightService=new FlightServiceImpl();
-                    iFlightService.insertFlight(flight);
+                    IFlightService iFlightService= new FlightServiceImpl();
+                    try {
+                        iFlightService.insertFlight(flight);
+                    } catch (SQLException e) {
+                        String errorMessage = e.getMessage();
+                        if (errorMessage.startsWith("ORA-12899")) {
+                            //ORA-12899: value too large for column "OPTS"."FLIGHT"."ID" (actual: 32, maximum: 30)
+                            // 按指定模式在字符串查找
+                            String pattern = "(\\w+-\\d{5}):(\\s\\w+)+\\s(\"\\w+\")\\.(\"\\w+\")\\.(\"\\w+\")";
+                            // 创建 Pattern 对象
+                            Pattern r = Pattern.compile(pattern);
+                            // 现在创建 matcher 对象
+                            Matcher m = r.matcher(errorMessage);
+                            if (m.find()) {
+                                String tableName = m.group(4);
+                                String columnName = m.group(5);
+                                System.out.println(tableName + "表的" + columnName + "这一列的值过大，请仔细检查");
+                            } else {
+                                System.out.println("NO MATCH");
+                            }
+                        }
+                    }
                     break;
                 }
                 case 2:break;

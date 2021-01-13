@@ -4,9 +4,7 @@
     <list default="true" id="5f1960f7-b1bc-4f97-9434-f16b500b80e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../01-10" beforeDir="false" afterPath="$PROJECT_DIR$/../01-10" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../01-11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-11/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderPlaneTicketSystem/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderPlaneTicketSystem/Flight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/MainUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/IFlightIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/IFlightIml.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/impl/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/impl/FlightServiceImpl.java" afterDir="false" />
@@ -37,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="G:/1+X大数据/整体训练/ojdbc6.jar!/" />
+    <property name="last_opened_file_path" value="G:/1+X大数据/0113/OrderPlaneTickesSystem" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -90,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610496630527</updated>
-      <workItem from="1610496635824" duration="6743000" />
+      <workItem from="1610496635824" duration="11854000" />
     </task>
     <task id="LOCAL-00001" summary="突然发现这个玩意儿是必填的">
       <created>1610502389274</created>
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610505117820</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="将输入的数据传到数据库">
+      <created>1610509940086</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610509940086</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,14 +127,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="605" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1610507203147" />
-    <state x="800" y="46" key="CommitChangelistDialog2" timestamp="1610505116254">
+    <state x="800" y="46" key="CommitChangelistDialog2" timestamp="1610509938529">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="800" y="46" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1610505116254" />
-    <state x="474" y="170" key="FileChooserDialogImpl" timestamp="1610506331162">
+    <state x="800" y="46" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1610509938529" />
+    <state x="474" y="170" key="FileChooserDialogImpl" timestamp="1610525994407">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="474" y="170" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1610506331162" />
+    <state x="474" y="170" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1610525994407" />
     <state x="665" y="320" width="273" height="220" key="Github.ShareDialog" timestamp="1610502343804">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
