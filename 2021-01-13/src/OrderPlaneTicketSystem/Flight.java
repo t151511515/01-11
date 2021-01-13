@@ -2,26 +2,25 @@ package OrderPlaneTicketSystem;
 
 public class Flight {
     private String id;
+    private String flightId;            //航班ID
+
     private String planeType;       //机型
+    private int currentSeatsNum;              //座位号
+
     private String departureAlrPort;        //起始机场
     private String destinationAirpPort;      //目的机场
     private String departureTime;           //出发时间
-    private int currentSeatsNum;              //座位号
-    private String totalSeatNum;        //总的座位数据
-    private String flightId;            //航班ID
+    //private String totalSeatNum;        //总的座位数据
 
-    public Flight(String id, String planeType, String departureAlrPort, String destinationAirpPort, String departureTime, int currentSeatsNum, String totalSeatNum, String flightId) {
+
+    public Flight(String id, String flightId, String planeType, int currentSeatsNum, String departureAlrPort, String destinationAirpPort, String departureTime) {
         this.id = id;
+        this.flightId = flightId;
         this.planeType = planeType;
+        this.currentSeatsNum = currentSeatsNum;
         this.departureAlrPort = departureAlrPort;
         this.destinationAirpPort = destinationAirpPort;
         this.departureTime = departureTime;
-        this.currentSeatsNum = currentSeatsNum;
-        this.totalSeatNum = totalSeatNum;
-        this.flightId = flightId;
-    }
-
-    public Flight(String id, String flightId, String planeType, int currentSeatsNum, String departureAirPort, String destinationAirPort, String departureTime) {
     }
 
     @Override
@@ -33,7 +32,7 @@ public class Flight {
                 ", destinationAirpORT='" + destinationAirpPort + '\'' +
                 ", departureTime='" + departureTime + '\'' +
                 ", currentSeatsNum=" + currentSeatsNum +
-                ", totalSeatNum='" + totalSeatNum + '\'' +
+
                 ", flightId='" + flightId + '\'' +
                 '}';
     }
@@ -53,15 +52,6 @@ public class Flight {
     public void setCurrentSeatsNum(int currentSeatsNum) {
         this.currentSeatsNum = currentSeatsNum;
     }
-
-    public String getTotalSeatNum() {
-        return totalSeatNum;
-    }
-
-    public void setTotalSeatNum(String totalSeatNum) {
-        this.totalSeatNum = totalSeatNum;
-    }
-
     public String getId() {
         return id;
     }
@@ -86,7 +76,7 @@ public class Flight {
         this.departureAlrPort = departureAlrPort;
     }
 
-    public String getDestinationAirpORT() {
+    public String getDestinationAirpPort() {
         return destinationAirpPort;
     }
 

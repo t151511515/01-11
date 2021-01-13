@@ -23,7 +23,7 @@ public class MainUI {
             int choice= scanner.nextInt();
             switch (choice){
                 case 1:{
-                    String id= UUID.randomUUID().toString();
+                    String id= UUID.randomUUID().toString().replace("-","");        //原地址有-，超出了存储范围，需要去掉
                     System.out.println("请输入航班编号：");
                     String flightId=scanner.next();
                     System.out.println("请输入机型：");

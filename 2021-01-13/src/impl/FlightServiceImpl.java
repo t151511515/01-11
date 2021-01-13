@@ -17,8 +17,8 @@ public class FlightServiceImpl implements IFlightService {
 
     @Override
     public void insertFlight(Flight flight) throws SQLException {
-        iFlightDao.insertFlight(flight);            //将对象的属性传到dao里面
-        //System.out.println(flight);
+        System.out.println(flight);
+        iFlightDao.insertFlight(flight);        //将对象的属性传到dao里面
     }
 
     @Override

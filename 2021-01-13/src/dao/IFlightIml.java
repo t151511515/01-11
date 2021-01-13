@@ -11,12 +11,12 @@ import java.util.Set;
 public class IFlightIml implements IFlightDao{
 
 
-    public IFlightIml() throws SQLException {
-    }
+//    public IFlightIml() throws SQLException {
+//    }
 
     @Override
     public void insertFlight(Flight flight) throws SQLException {
-        String url="jdbc:oracle:thin:@localhost:1521:oral";
+        String url="jdbc:oracle:thin:@localhost:1521:orcl";
         String username="opts";
         String password="opts1234";
         Connection conn= DriverManager.getConnection(url,username,password);
@@ -28,8 +28,9 @@ public class IFlightIml implements IFlightDao{
         pstmt.setString(3,flight.getPlaneType());
         pstmt.setInt(4,flight.getCurrentSeatsNum());
         pstmt.setString(5,flight.getDepartureAlrPort());
-        pstmt.setString(6,flight.getDestinationAirpORT());
+        pstmt.setString(6,flight.getDestinationAirpPort());  //flight.getDestinationAirp;
         pstmt.setString(7,flight.getDepartureTime());
+        pstmt.executeUpdate();
     }
 
     @Override
