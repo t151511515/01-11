@@ -11,7 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MainUI {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         while(true){
             System.out.println("请输入相应的数字进行操作：");
