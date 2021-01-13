@@ -1,13 +1,24 @@
 package impl;
 
 import OrderPlaneTicketSystem.Flight;
+import dao.IFlightDao;
+import dao.IFlightIml;
 
+import java.sql.SQLException;
 import java.util.Set;
 
 public class FlightServiceImpl implements IFlightService {
+
+    IFlightDao iFlightDao;
+
+    public FlightServiceImpl() throws SQLException {
+        this.iFlightDao=new IFlightIml();               //构造方法
+    }
+
     @Override
-    public void insertFlight(Flight flight) {
-        System.out.println(flight);
+    public void insertFlight(Flight flight) throws SQLException {
+        iFlightDao.insertFlight(flight);            //将对象的属性传到dao里面
+        //System.out.println(flight);
     }
 
     @Override

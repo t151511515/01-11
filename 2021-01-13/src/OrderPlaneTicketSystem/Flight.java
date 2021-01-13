@@ -4,17 +4,17 @@ public class Flight {
     private String id;
     private String planeType;       //机型
     private String departureAlrPort;        //起始机场
-    private String destinationAirpORT;      //目的机场
+    private String destinationAirpPort;      //目的机场
     private String departureTime;           //出发时间
     private int currentSeatsNum;              //座位号
     private String totalSeatNum;        //总的座位数据
     private String flightId;            //航班ID
 
-    public Flight(String id, String planeType, String departureAlrPort, String destinationAirpORT, String departureTime, int currentSeatsNum, String totalSeatNum, String flightId) {
+    public Flight(String id, String planeType, String departureAlrPort, String destinationAirpPort, String departureTime, int currentSeatsNum, String totalSeatNum, String flightId) {
         this.id = id;
         this.planeType = planeType;
         this.departureAlrPort = departureAlrPort;
-        this.destinationAirpORT = destinationAirpORT;
+        this.destinationAirpPort = destinationAirpPort;
         this.departureTime = departureTime;
         this.currentSeatsNum = currentSeatsNum;
         this.totalSeatNum = totalSeatNum;
@@ -30,7 +30,7 @@ public class Flight {
                 "id='" + id + '\'' +
                 ", planeType='" + planeType + '\'' +
                 ", departureAlrPort='" + departureAlrPort + '\'' +
-                ", destinationAirpORT='" + destinationAirpORT + '\'' +
+                ", destinationAirpORT='" + destinationAirpPort + '\'' +
                 ", departureTime='" + departureTime + '\'' +
                 ", currentSeatsNum=" + currentSeatsNum +
                 ", totalSeatNum='" + totalSeatNum + '\'' +
@@ -87,11 +87,11 @@ public class Flight {
     }
 
     public String getDestinationAirpORT() {
-        return destinationAirpORT;
+        return destinationAirpPort;
     }
 
     public void setDestinationAirpORT(String destinationAirpORT) {
-        this.destinationAirpORT = destinationAirpORT;
+        this.destinationAirpPort = destinationAirpORT;
     }
 
     public String getDepartureTime() {

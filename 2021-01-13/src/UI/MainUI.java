@@ -4,11 +4,12 @@ import OrderPlaneTicketSystem.Flight;
 import impl.FlightServiceImpl;
 import impl.IFlightService;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.UUID;
 
 public class MainUI {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         while(true){
             System.out.println("请输入相应的数字进行操作：");
