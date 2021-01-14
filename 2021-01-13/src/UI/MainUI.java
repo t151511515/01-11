@@ -6,6 +6,7 @@ import impl.IFlightService;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -38,7 +39,8 @@ public class MainUI {
                     String destinationAirPort=scanner.next();
                     System.out.println("请输入起飞时间：");
                     String departureTime=scanner.next();
-                    Flight flight=new Flight(id,flightId,planeType,currentSeatsNum,departureAirPort,destinationAirPort,departureTime);
+                    Flight flight=new Flight(id,flightId,planeType,currentSeatsNum,
+                            departureAirPort,destinationAirPort,departureTime);
                     IFlightService iFlightService= new FlightServiceImpl();
                     try {
                         iFlightService.insertFlight(flight);
@@ -55,7 +57,7 @@ public class MainUI {
                             if (m.find()) {
                                 String tableName = m.group(4);
                                 String columnName = m.group(5);
-                                System.out.println(tableName + "表的" + columnName + "这一列的值过大，请仔细检查");
+                                System.out.println(tableName + "表的" + columnName + "这一列的值过大，请仔细检查，联系管理员");
                             } else {
                                 System.out.println("NO MATCH");
                             }
@@ -63,8 +65,45 @@ public class MainUI {
                     }
                     break;
                 }
-                case 2:break;
-                case 3:break;
+                case 2: {
+                    IFlightService iFlightService = new FlightServiceImpl();
+                    try {
+                        Set<Flight> allFlights = iFlightService.getAllFlights();
+                    /*
+                    Set的遍历需要用到迭代器
+                     */
+                        for (Flight flight : allFlights) {
+                            System.out.println(flight);
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                        break;
+                    }
+                }
+                case 3: {
+                    System.out.println("输入相应的编号选择您要查询航班的方式：");
+                    System.out.println("1，按起飞时间查询");
+                    System.out.println("2，按空座信息查询");
+                    System.out.println("3，按起飞第查询");
+                    System.out.println("4，按目的地查询");
+                    int choose = scanner.nextInt();
+                    if (choose == 1) {
+                        System.out.println("请输入起飞时间：");
+                        String departureTime = scanner.next();
+                        IFlightService iFlightService = new FlightServiceImpl();
+                        try {
+                            Flight flight = iFlightService.getFlightByDepartureTime(departureTime);
+                            if (flight != null) {
+                                System.out.println("查询结果：" + flight);
+                            } else {
+                                System.out.println("没有查询到该时间的航班");
+                            }
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                            break;
+                        }
+                    }
+                }
                 case 4:break;
                 case 5:break;
                 case 6:return;

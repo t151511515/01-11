@@ -12,6 +12,7 @@ public class Order {
     private float yhq;              //优惠券
     private float hszj;             //含税总价
     private Set<customer> customer;       //顾客数据总集//<>内为泛型
+    private Flight flight;
 
 
     public String getId() {
@@ -84,5 +85,13 @@ public class Order {
 
     public void setCustomer(Set<OrderPlaneTicketSystem.customer> customer) {
         this.customer = customer;
+    }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
     }
 }

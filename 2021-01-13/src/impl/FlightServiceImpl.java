@@ -11,8 +11,8 @@ public class FlightServiceImpl implements IFlightService {
 
     IFlightDao iFlightDao;  //因为要给FlightImpl传值，然而两层之间要用接口进行通信需要通过接口，所以需要创建接口这个成员变量
 
-    public FlightServiceImpl() throws SQLException {
-        this.iFlightDao=new IFlightIml();               //构造方法就是给成员变量赋值
+    public FlightServiceImpl()  {
+        iFlightDao=new IFlightIml();               //构造方法就是给成员变量赋值
     }
 
     @Override
@@ -23,12 +23,12 @@ public class FlightServiceImpl implements IFlightService {
 
     @Override
     public Set<Flight> getAllFlights() {
-        return null;
+        return iFlightDao.getAllFlights();
     }
 
     @Override
     public Flight getFlightByDepartureTime(String departureTime) {
-        return null;
+        return iFlightDao.getFlightByDepartureTime(departureTime);
     }
 
     @Override

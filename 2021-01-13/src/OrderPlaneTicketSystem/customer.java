@@ -5,10 +5,10 @@ import java.util.Set;
 
 public class customer {
     public String id;
-    public String name;                 //名字
-    public String cardID;           //身份证
-    public String phone;            //电话号码
     private String custoerType;             //顾客类型：成人、儿童、婴儿
+    public String name;                 //名字
+    public String phone;            //电话号码
+    public String cardID;           //身份证
     private Date birthDate;             //出生日期
     private Set<Order> orderSet;        //一个顾客能有多个订单
 
